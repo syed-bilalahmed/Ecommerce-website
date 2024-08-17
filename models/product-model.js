@@ -3,17 +3,17 @@ const mongoose =require("mongoose");
 const prodctSchema= mongoose.Schema({
 
 name:{
-    typeof:String,
+    type:String,
     required:true,
     
 },
 image:String,
 price:{
-    typeof:Number,
+    type:Number,
     required:true,
     },
  discount:{ 
-    typeof:Number,
+    type:Number,
     default:0,
     },
 bgcolor:String,
