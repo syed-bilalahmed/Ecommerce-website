@@ -27,7 +27,7 @@ router.post("/register", async (req, res) => {
             password: hash,
           });
          
-          let token=jwt.sign({email, id:newUser._id},  process.env.JWT_KEY, { expiresIn: '1h' }) 
+          let token=
 res.cookie("token",token)
 res.send("user created sucsffully");
 
