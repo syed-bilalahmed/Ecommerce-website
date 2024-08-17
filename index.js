@@ -7,7 +7,7 @@ const db= require("./config/mongoose-connection")
 const ownersRouter=require("./routes/onwersRouter");
 const usersRouter=require("./routes/usersRouter");
 const productsRouter=require("./routes/productsRouter");
-
+require("dotenv");
 // Use middleware functions correctly
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
