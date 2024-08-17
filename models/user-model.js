@@ -1,7 +1,10 @@
 import mongoose from "mongoose";
 
-const mongoose= mongoose.Schema({
+const userSchema= mongoose.Schema({
+
 
 }
 ,
      { timestamps: true})
+module.exports= mongoose.model("User",userSchema)
+     
