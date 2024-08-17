@@ -1,8 +1,11 @@
-const mongoose =require("mongoose");
+const mongoose = require('mongoose');
 
-try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/ecommerce');
-  } catch (error) {
-    handleError(error);
-  }
+mongoose.connect('mongodb://127.0.0.1:27017/ecommerce', {
 
+})
+.then(() => {
+  console.log('Database connected successfully!');
+})
+.catch(error => {
+  console.error('Database connection error:', error.message);
+});
