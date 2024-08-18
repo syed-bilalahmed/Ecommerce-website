@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use("/owner",ownersRouter);
-app.use("/users",usersRouter);
+app.use("/user",usersRouter);
 app.use("/products",productsRouter);
 
 // Set the view engine
