@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert2 CDN -->
+</head>
+<body>
+    <!-- Your content here -->
+
+    <!-- Logout Button -->
+    <form action="/user/logout" method="POST">
+        <button type="submit" class="btn btn-warning">Logout</button>
+    </form>
+
+    <% if (messages.success) { %>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: '<%= messages.success %>',
+                showConfirmButton: false,
+                timer: 3000 // Time in milliseconds (1 second)
+            }).then(() => {
+                // Redirect after the alert
+                window.location.href = '/shop'; // Adjust the URL to the desired redirect path
+            });
+        </script>
+    <% } %>
+
+    <% if (messages.error) { %>
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: '<%= messages.error %>',
+                showConfirmButton: false,
+                timer: 3000 // Time in milliseconds (1 second)
+            }).then(() => {
+                // Optionally, you can redirect or perform other actions
+                window.location.href = '/login'; // Adjust the URL to the desired redirect path
+            });
+        </script>
+    <% } %>
+</body>
+</html>
